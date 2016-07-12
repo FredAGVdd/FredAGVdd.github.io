@@ -1,0 +1,38 @@
+---
+layout: post
+title: The art of escaping...
+date: 2010-11-09 17:15:03.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Content Management
+- Introduction To
+- Java
+- Query Language
+tags:
+- BEA
+- Character Escaping example
+- Content Management
+- Expression Language
+- Portal
+meta:
+  _edit_last: '300497'
+author:
+  login: fvdd
+  email: frederik.a.g.vandendriessche@gmail.com
+  display_name: fvdd
+  first_name: ''
+  last_name: ''
+---
+<p>Only prisoners with the liberty of learning on-line about the art of escaping characters (not  breaking jail), and BEA Portal Content Management developers may find this useful...</p>
+<p>I've been using ExpressionHelper.parse(stmtStr) to parse my statement stmtStr.</p>
+<p>Recently, some of the meta data changed, and this introduced a single quote &#039; in the value I'm using to compare a property with, e.g. to_property(&#039;Repo\Type1&#039;,&#039;Poperty1&#039;) = &#039;Boys&#039; Books&#039;</p>
+<p>This caused the ExpressionHelper to fail parsing, as the single quote was not escaped...</p>
+<p>ExpressionHelper JavaDoc says backslash is the escaping character</p>
+<p>to_property(&#039;Repo\Type1&#039;,&#039;Poperty1&#039;) = &#039;Boys\&#039; Books&#039;   </p>
+<p>Right?  Wrong! --&gt; This results in exactly the same parsing exception.</p>
+<p>to_property(&#039;Repo\Type1&#039;,&#039;Poperty1&#039;) = &#039;Boys\\\&#039; Books&#039; </p>
+<p>Right?  Wrong! --&gt; The parsing exception is no longer, but now the underlying SQL Server doesn't like the SQL syntax produced very much...</p>
+<p>to_property(&#039;Repo\Type1&#039;,&#039;Poperty1&#039;) = &#039;Boys\\\&#039;\\\&#039; Books&#039; </p>
+<p>Right!  And so ... this is how a single quote &#039; becomes \\\&#039;\\\&#039; ...</p>
