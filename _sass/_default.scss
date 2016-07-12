@@ -1,8 +1,23 @@
 /* =Base */
+html{
+    /* This image will be displayed fullscreen */
+    background:url('/images/IMG_4217-min.JPG') no-repeat center center;
+
+    /* Ensure the html element always takes up the full height of the browser window */
+    min-height:100%;
+
+    /* The Magic */
+    background-size:cover;
+}
+
 body {
     font-family: 'Inconsolata', ;
     color: $iron;
     background-color: $dorian;
+    /* Workaround for some mobile browsers -- background image sizing*/
+    min-height:100%;
+    opacity: 0.75;
+
 }
 
 a {
