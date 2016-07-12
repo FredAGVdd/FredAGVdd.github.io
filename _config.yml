@@ -1,0 +1,35 @@
+# Site settings
+
+# Site settings
+title: Fred's Jekyll blog
+email: frederik.a.g.vandendriessche@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Frederik A.G. Vandendriessche using ruby gems and nodejs to serve you
+  a static website, thus very speedy, yet also having loads of dynamic looking
+  features.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.fredv.net" # the base hostname & protocol for your site
+twitter_username: f_vdd
+github_username:  FredAGVdd
+
+author:
+  fullname: Frederik AG Vandendriessche
+  googleplus: https://plus.google.com/105679565644027307229
+  github: FredAGVdd
+  twitter: f_vdd
+
+  # disqus: your_disqus_forum_shortname
+
+# google_analytics: 'UA-XXXXXXXX-X'
+
+# Syntax highlighting
+highlightstyle: ''
+styles: [agate, androidstudio, arta, asceti, atelier-cave.dark, atelier-cave.light, atelier-dune.dark, atelier-dune.light, atelier-estuary.dark, atelier-estuary.light, atelier-forest.dark, atelier-forest.light, atelier-heath.dark, atelier-heath.light, atelier-lakeside.dark, atelier-lakeside.light, atelier-plateau.dark, atelier-plateau.light, atelier-savanna.dark, atelier-savanna.light, atelier-seaside.dark, atelier-seaside.light, atelier-sulphurpool.dark, atelier-sulphurpool.light, brown_paper, codepen-embed, color-brewer, dark, darkula, default, docco, far, foundation, github, github-gist, googlecode, grayscale, hopscotch, hybrid, idea, ir_black, kimbie.dark, kimbie.light, magula, mono-blue, monokai, monokai_sublime, obsidian, paraiso.dark, paraiso.light, pojoaque, railscast, rainbow, school_book, solarized_dark, solarized_light, styles_list.txt, sunburst, tomorrow, tomorrow-night-blue, tomorrow-night-bright, tomorrow-night, tomorrow-night-eightie, v, xcode, zenburn]
+
+# Handling Reading
+exclude: ["README.md", "README.html"]
+
+# Build settings
+highlighter: null
+# Build settings
+markdown: kramdown

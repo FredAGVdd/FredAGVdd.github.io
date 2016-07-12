@@ -1,0 +1,34 @@
+{
+  "name": "fredagvdd.github.io",
+  "version": "1.0.0",
+  "description": "My (static) homepage.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredAGVdd/FredAGVdd.github.io.git"
+  },
+  "keywords": [
+    "my",
+    "homepage",
+    "as",
+    "static",
+    "page",
+    "on",
+    "a",
+    "mostly",
+    "static",
+    "site"
+  ],
+  "author": "Frederik A.G. Vandendriessche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredAGVdd/FredAGVdd.github.io/issues"
+  },
+  "homepage": "https://github.com/FredAGVdd/FredAGVdd.github.io#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}
