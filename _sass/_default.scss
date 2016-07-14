@@ -13,13 +13,38 @@ html{
 body {
     font-family: 'Inconsolata', ;
     color: $iron;
-    background-color: $dorian;
+    border-radius: 25px;
+    margin: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: rgba(255,255,255,0.75);
+    /*background-color: $dorian;*/
     /* Workaround for some mobile browsers -- background image sizing*/
     min-height:100%;
-    opacity: 0.75;
+    /*opacity: 0.75;*/
 
 }
 
+.bigText {
+    font-size: 1.5em;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;  
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+}   
+    
 a {
     color: $cloudy;
     font-weight: bold;

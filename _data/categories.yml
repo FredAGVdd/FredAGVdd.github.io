@@ -7,23 +7,14 @@
 - slug: productivity
   name: Productivity
 
-- slug: health
-  name: Health
-
 - slug: humanity
   name: Humanity
 
 - slug: idea
   name: Idea
 
-- slug: ted
-  name: TED
-
 - slug: video
   name: Video
-
-- slug: wealth
-  name: Wealth
 
 - slug: javascript
   name: JavaScript

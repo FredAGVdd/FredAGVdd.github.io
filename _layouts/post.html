@@ -4,7 +4,7 @@ layout: default
 {% include post/title.html %}
 
 <div class="content">
-    {{ content }}
+    {{ page.content | markdownify }}
 </div>
 
 {% include post/about.html %}
