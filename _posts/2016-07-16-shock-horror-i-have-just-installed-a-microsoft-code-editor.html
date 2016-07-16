@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shock Horror I've just installed Visual Studio for Ubuntu
+title: Shock Horror I've just installed Visual Studio Code for Ubuntu
 categories:
 - idea
 - productivity
@@ -26,8 +26,45 @@ Shock number 2: the editor is actually an application running in Chrome (at leas
 </ul>
  
 
+
 Also 
  **.NET** is open source?!? Read all about it: <a href="http://www.cio.com/article/3007061/open-source-tools/10-products-that-big-tech-companies-have-open-sourced-recently.html#slide7">10 products that big tech companies have open-sourced recently</a>
 <blockquote style="text-align: left">
 It made headlines when Microsoft open-sourced its powerful .NET framework in late 2014, with many heralding the news as proof that Microsoft – formerly the great bete noire of open-source – had turned a corner.
 </blockquote>
+
+
+And to end the coding day beautifuly, a stacktrace - yes, Visual Studio Code on Ubuntu got "frozen".
+<blockquote style="text-align: left"><pre>
+#
+# Fatal error in ../../v8/src/execution.cc, line 64
+# Check failed: AllowJavascriptExecution::IsAllowed(isolate).
+#
+
+==== C stack trace ===============================
+
+ 1: V8_Fatal
+ 2: 0x7f6e182b695a
+ 3: v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)
+ 4: v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+ 5: atom::ObjectLifeMonitor::RunCallback()
+ 6: atom::ObjectLifeMonitor::OnObjectGC(v8::WeakCallbackInfo<atom::ObjectLifeMonitor> const&)
+ 7: v8::internal::GlobalHandles::DispatchPendingPhantomCallbacks(bool)
+ 8: v8::internal::GlobalHandles::PostGarbageCollectionProcessing(v8::internal::GarbageCollector, v8::GCCallbackFlags)
+ 9: v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags)
+10: v8::internal::Heap::CollectGarbage(v8::internal::GarbageCollector, char const*, char const*, v8::GCCallbackFlags)
+11: v8::internal::Factory::NewByteArray(int, v8::internal::PretenureFlag)
+12: v8::internal::TranslationBuffer::CreateByteArray(v8::internal::Factory*)
+13: v8::internal::LCodeGenBase::PopulateDeoptimizationData(v8::internal::Handle<v8::internal::Code>)
+14: v8::internal::LChunk::Codegen()
+15: v8::internal::OptimizedCompileJob::GenerateCode()
+16: v8::internal::Compiler::GetConcurrentlyOptimizedCode(v8::internal::OptimizedCompileJob*)
+17: v8::internal::OptimizingCompileDispatcher::InstallOptimizedFunctions()
+18: v8::internal::StackGuard::HandleInterrupts()
+19: v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+20: 0x35268f80c1fb
+Failed to get crash dump id.
+Report Id: 
+[VS Code]: detected unresponsive
+[VS Code]: detected unresponsive
+</pre></blockquote>
