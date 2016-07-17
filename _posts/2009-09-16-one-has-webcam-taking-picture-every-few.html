@@ -11,4 +11,17 @@ blogger_id: tag:blogger.com,1999:blog-5059265.post-3841761533411725913
 blogger_orig_url: http://frederiks.blogspot.com/2009/09/one-has-webcam-taking-picture-every-few.html
 ---
 
-One has a webcam taking a picture every few seconds.<br />The webcam puts the picture in a directory accesible by Apache.<br />One uses javascript in an html page to dynamically update a webcam webpage.<br /><br />The webcam overwrites the previous picture taken.<br />The old picture ends up in the Recycle bin.<br />After a while, one collects hundreds of images 'webcam.jpg' in the Recycle Bin...<br /><br />Windows doesn't provide you with an option to restore these files - without one overwriting the other (remember, they have the same name (and came from the same source location/directory).<br /><br />Here's how I rescued my old webcam pictures:<br /><br /><code><br />| fd |<br />fd _ FileDirectory on: 'C:\RECYCLER\S-1-5-21-527237240-515967899-725345543-500' .<br />fd entries do: [ :fde |<br />   (fde name matches: '*.jpg') ifTrue: [<br />       fd copyFileNamed: fde name toFileNamed: ('c:\webcam\webcam_', ((DateAndTime fromSeconds: fde modificationTime) asSortableString), '.jpg')   ]  ]<br /></code><br /><br />The above script will run on --probably-- any Squeak  (-: and/or :-) Smalltalk.<br /><br />Let me know if you've crafted a wicked variant on the above...
+One has a webcam taking a picture every few seconds.<br />The webcam puts the picture in a directory accesible by Apache.<br />One uses javascript in an html page to dynamically update a webcam webpage.<br /><br />The webcam overwrites the previous picture taken.<br />The old picture ends up in the Recycle bin.<br />After a while, one collects hundreds of images 'webcam.jpg' in the Recycle Bin...<br /><br />Windows doesn't provide you with an option to restore these files - without one overwriting the other (remember, they have the same name (and came from the same source location/directory).<br /><br />Here's how I rescued my old webcam pictures:<br /><br /><code><br />
+
+```smalltalk
+| fd |
+fd _ FileDirectory on: 'C:\RECYCLER\S-1-5-21-527237240-515967899-725345543-500'.
+fd entries do: [ :fde |
+  (fde name matches: '*.jpg') ifTrue: [
+    fd copyFileNamed: 
+         fde name 
+       toFileNamed: 
+         ('c:\webcam\webcam_', 
+         ((DateAndTime fromSeconds: fde modificationTime) asSortableString), '.jpg') ] ]
+```
+<br />The above script will run on --probably-- any Squeak  (-: and/or :-) Smalltalk.<br /><br />Let me know if you've crafted a wicked variant on the above...

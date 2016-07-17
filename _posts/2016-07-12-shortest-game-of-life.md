@@ -8,8 +8,8 @@ categories:
 
 <a href="http://codegolf.stackexchange.com/questions/3434/shortest-game-of-life" target="_bland">Programming Puzzles &amp; Code Golf</a>
 
-<code><pre>```
-&lt;html&gt;&lt;body onload="k=40;g=10;b=[];
+```html
+<html><body onload="k=40;g=10;b=[];
 setInterval(function(){
     c=[];
 	for(y=k*k;y--;) {
@@ -27,8 +27,8 @@ v.addEventListener('click',function(e){
   b[~~((e.pageY-v.offsetTop)/g)*k+~~((e.pageX-v.offsetLeft)/g)]^=1
   },0);
 r=v.getContext('2d');
-for(y=k*k;y--;)b[y]=0"&gt;&lt;canvas&gt;&lt;/canvas&gt;&lt;input type="checkbox"/&gt;Run&lt;/body&gt;&lt;/html&gt;
-	```</pre></code>
+for(y=k*k;y--;)b[y]=0"><canvas></canvas><input type="checkbox"/>Run</body></html>
+```
 
 <iframe width="520" height="520" src="/assets/shortestGameOfLife.html" frameborder="0" allowfullscreen></iframe>
 
