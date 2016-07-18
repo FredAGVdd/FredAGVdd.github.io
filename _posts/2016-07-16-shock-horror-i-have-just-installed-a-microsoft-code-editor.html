@@ -45,17 +45,17 @@ And to end the coding day beautifuly, a stacktrace - yes, Visual Studio Code on 
 
  1: V8_Fatal
  2: 0x7f6e182b695a
- 3: v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)
- 4: v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+ 3: v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle&lt;v8::internal::Object&gt;, v8::internal::Handle&lt;v8::internal::Object&gt;, int, v8::internal::Handle&lt;v8::internal::Object&gt;*)
+ 4: v8::Function::Call(v8::Local&lt;v8::Context&gt;, v8::Local&lt;v8::Value&gt;, int, v8::Local&lt;v8::Value&gt;*)
  5: atom::ObjectLifeMonitor::RunCallback()
- 6: atom::ObjectLifeMonitor::OnObjectGC(v8::WeakCallbackInfo<atom::ObjectLifeMonitor> const&)
+ 6: atom::ObjectLifeMonitor::OnObjectGC(v8::WeakCallbackInfo&lt;atom::ObjectLifeMonitor&gt; const&)
  7: v8::internal::GlobalHandles::DispatchPendingPhantomCallbacks(bool)
  8: v8::internal::GlobalHandles::PostGarbageCollectionProcessing(v8::internal::GarbageCollector, v8::GCCallbackFlags)
  9: v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags)
 10: v8::internal::Heap::CollectGarbage(v8::internal::GarbageCollector, char const*, char const*, v8::GCCallbackFlags)
 11: v8::internal::Factory::NewByteArray(int, v8::internal::PretenureFlag)
 12: v8::internal::TranslationBuffer::CreateByteArray(v8::internal::Factory*)
-13: v8::internal::LCodeGenBase::PopulateDeoptimizationData(v8::internal::Handle<v8::internal::Code>)
+13: v8::internal::LCodeGenBase::PopulateDeoptimizationData(v8::internal::Handle&lt;v8::internal::Code&gt;)
 14: v8::internal::LChunk::Codegen()
 15: v8::internal::OptimizedCompileJob::GenerateCode()
 16: v8::internal::Compiler::GetConcurrentlyOptimizedCode(v8::internal::OptimizedCompileJob*)
