@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: et qu'est-ce qu'on fait maintenant?
+subtitle: Et qu'est-ce qu'on fait maintenant?
 permalink: /about/
 ---
 
