@@ -1,20 +1,23 @@
+- slug: ai
+  name: AI
+
+- slug: engineering
+  name: Engineering
+
+- slug: javascript
+  name: JavaScript
+
 - slug: design
   name: Design
-
-- slug: tools
-  name: Tools
 
 - slug: productivity
   name: Productivity
 
-- slug: humanity
-  name: Humanity
-
 - slug: idea
   name: Idea
 
-- slug: video
-  name: Video
+- slug: tools
+  name: Tools
 
-- slug: javascript
-  name: JavaScript
+- slug: seo
+  name: SEO
