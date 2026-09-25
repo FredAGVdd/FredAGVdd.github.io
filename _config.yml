@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
   a static website, thus very speedy, yet also having loads of dynamic looking
   features.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.fredv.net" # the base hostname & protocol for your site
+url: "https://fredagvdd.github.io" # the base hostname & protocol for your site
 twitter_username: f_vdd
 github_username:  FredAGVdd
 
