@@ -11,7 +11,7 @@ Twenty-five-odd years later I'm still at it: **TypeScript, React and Next.js** u
 
 I like the unglamorous parts — making things fast, correct and maintainable. I like the glamorous parts too, on the good days when they survive contact with production.
 
-> "Electrons are fascinating beyond compare" — a few milliwatts, and yet they carry a signal around the planet at nearly the speed of light. Still the best magic trick I know.
+> Electrons are fascinating beyond compare — a few milliwatts, and yet they carry a signal around the planet at nearly the speed of light. Still the best magic trick I know.
 
 Off the keyboard, you'll usually find me somewhere in the Maltese sun, or taking something apart to figure out how it works so I can go build a small version of it.
 
