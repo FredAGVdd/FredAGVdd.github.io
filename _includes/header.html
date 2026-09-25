@@ -7,18 +7,4 @@
             <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
         </ul>
     </div>
-
-    <ul class="social-links">
-        {% if site.author.github %}
-            <li class="social-links__item"><a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </a></li>
-        {% endif %}
-
-        {% if site.author.twitter %}
-            <li class="social-links__item"><a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank" rel="noopener" aria-label="Twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a></li>
-        {% endif %}
-    </ul>
 </header>
