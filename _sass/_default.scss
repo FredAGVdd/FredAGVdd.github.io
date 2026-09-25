@@ -1,7 +1,7 @@
 /* =Base */
 html{
     /* This image will be displayed fullscreen */
-    background:url('/images/IMG_4217-min.JPG') no-repeat center center;
+    background:url('/images/bg.jpg') no-repeat center center;
 
     /* Ensure the html element always takes up the full height of the browser window */
     min-height:100%;
@@ -292,8 +292,13 @@ strong {
         line-height: 1.6;
     }
 
+    body {
+        margin: 1.5em 1.1em;   /* was 10em 5em — far less padding on mobile */
+    }
+
     .wrapper {
-        width: 80%;
+        width: 92%;
+        margin: 40px auto;     /* was 100px auto */
     }
 
     .navigation,
@@ -304,6 +309,19 @@ strong {
     .social-links {
         font-size: 30px;
         margin-top: 35px;
+    }
+
+    .social-links__entry {
+        display: inline-block;
+        min-width: 44px;
+        min-height: 44px;
+        line-height: 44px;
+        text-align: center;
+    }
+
+    .menu__entry a {
+        display: inline-block;
+        padding: 8px 6px;
     }
 
     .page-title {
@@ -335,11 +353,42 @@ strong {
         margin-top: 80px;
     }
 
+    .categories {
+        line-height: 2.4;
+    }
+
+    .categories__item a {
+        display: inline-block;
+        padding: 8px 5px;
+        min-height: 24px;
+    }
+
+    .categories__item:after {
+        margin-left: 9px;
+    }
+
     .post-title__text {
         font-size: 28px;
     }
 
     .post-title__subtitle {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 0.7em 0.6em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .wrapper {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .logo {
+        font-size: 40px;
     }
 }
